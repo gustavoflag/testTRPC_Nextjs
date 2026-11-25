@@ -3,7 +3,7 @@
 Two apps sharing one tRPC contract:
 
 - `task-management-be/`: tRPC API (Express, Yarn workspace member). Before backend work, read `task-management-be/CLAUDE.md` for the module pattern.
-- `task-management-fe/`: Next.js 16 client. It is a separate npm project with its own git repo and lockfile, outside the Yarn workspace. Its `AGENTS.md` covers Next.js specifics.
+- `task-management-fe/`: Next.js 16 client. It is a separate npm project with its own lockfile, outside the Yarn workspace. Its `AGENTS.md` covers Next.js specifics.
 
 Root scripts:
 - `yarn setup`: installs both apps.

@@ -64,12 +64,11 @@ The design decisions behind each app (module layout, pagination, validation, toa
 ├── package.json          # root scripts + Yarn workspace (backend only)
 ├── yarn.lock
 ├── task-management-be/   # Yarn workspace member
-└── task-management-fe/   # separate npm project (own package-lock.json and git repo)
+└── task-management-fe/   # separate npm project (own package-lock.json)
 ```
 
 - **Flat layout:** both apps live directly at the root. They used to sit under a `trpclibrary/` folder, which was removed and the workspace config updated to match.
 - **The frontend is not in the Yarn workspace, on purpose.** Adding it would move all of its packages, including Next.js and React, into a shared Yarn setup, and its `package-lock.json` would be dropped. That's a larger change than a PoC needs. As a result, it is installed separately (`yarn setup` handles it) and its scripts are called with `npm --prefix`.
-- **`wsrun`** is still in the root `devDependencies` but no longer used by any script. It can be removed.
 
 ## Known issues
 

@@ -1,7 +1,6 @@
 {
   "name": "trpclibrary",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -14,7 +13,6 @@
     "task-management-be"
   ],
   "devDependencies": {
-    "concurrently": "^5.2.0",
-    "wsrun": "^5.2.0"
+    "concurrently": "^5.2.0"
   }
 }
