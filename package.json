@@ -1,0 +1,20 @@
+{
+  "name": "trpclibrary",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -k -n be,fe -c blue,magenta \"yarn --cwd task-management-be start\" \"npm --prefix task-management-fe run dev\"",
+    "start": "yarn dev",
+    "setup": "yarn install && npm --prefix task-management-fe install",
+    "test": "yarn --cwd task-management-be test && npm --prefix task-management-fe test"
+  },
+  "workspaces": [
+    "task-management-be"
+  ],
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "wsrun": "^5.2.0"
+  }
+}
